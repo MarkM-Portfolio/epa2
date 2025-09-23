@@ -1,0 +1,323 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  min-width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.epacoin {
+  display: inline-flex;
+  height: 18px;
+  width: 20px;
+  vertical-align: middle; /* Adjust vertical alignment */
+  /* z-index: 2; */
+}
+.epacoin-store {
+  display: inline-flex;
+  height: 22px;
+  width: 24px;
+  vertical-align: middle; /* Adjust vertical alignment */
+  /* z-index: 2; */
+}
+
+.colored-circle {
+  position: fixed;
+  display: inline-flex;
+  margin-left: 26px;
+  margin-right: 5px;
+  margin-bottom: -2px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0.5px;
+  height: 15px;
+  width: 17px;
+  background-color: red;
+  z-index: 2;
+}
+
+.otp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.otp-input {
+  width: 3rem !important;
+  height: 3rem;
+  margin: 0 1rem;
+  font-size: 2rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+.font-family-karla { font-family: karla; }
+.bg-sidebar { background: #3d68ff; }
+.cta-btn { color: #3d68ff; }
+.upgrade-btn { background: #1947ee; }
+.upgrade-btn:hover { background: #0038fd; }
+.active-nav-link { background: #F3F4F6; color: #000000}
+.nav-item:hover:not(.active-nav-link) { background: rgba(255, 255, 255, 0.1);}
+.account-link:hover { background: #3d68ff; }
+.active-nav-link:before {
+  box-shadow: 20px 10px 0 #F3F4F6 !important;
+}
+.active-nav-link:after {
+  box-shadow: 20px -5px 0 #F3F4F6 !important;
+}
+.rd3t-link {
+  stroke: rgb(156 163 175) !important;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.chat-app {
+  display: flex;
+  height: 90vh;
+  border: 1px solid #ccc;
+  flex-direction: column; /* Stack sidebar and chat vertically on smaller screens */
+}
+
+.sidebar {
+  width: 100%;
+  border-right: 0px; /* Remove border on mobile */
+  display: flex; /* Hide sidebar
+  by default on mobile */
+}
+
+.channel-list {
+    list-style: none;
+    padding: 10px;;
+  }
+  
+  .channel-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .channel-item.active {
+    background-color: #5bc53c;
+    color: white;
+  }
+  
+/* Adjust the width of the chat container so it doesn't overlap with the input container */
+.chat-container {
+  width: 100%;
+  padding-bottom: 70px; /* Adjust this value to match the total height of your input container */
+}
+
+/* Ensure the message container takes the remaining height */
+.messages-container {
+  overflow-y: auto;
+  flex-grow: 1;
+  -webkit-overflow-scrolling: touch; /* Better scrolling in iOS */
+}
+
+.message {
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 20px;
+  max-width: 60%;
+}
+
+.message.sent {
+  background-color: #5BC53C;
+  color: white;
+  position: sticky;
+  left: 0;
+  align-self: flex-start;
+}
+
+.message.received {
+  background-color: lightgray;
+  color: black;
+  position: sticky;
+  right: 0;
+  align-self: flex-end;
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+  position: fixed; /* Make the input container fixed at the bottom */
+  bottom: 0px; /* Adjust this value based on your Navbar's height */
+  left: 0;
+  right: 0;
+  background-color: white; /* Or any color that matches your design */
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Optional, adds a subtle shadow above the input */
+  z-index: 100; /* Ensure it's above other elements */
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.chat-button {
+  padding: 10px 20px;
+  background-color: #5BC53C;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.sidebar.visible {
+  display: block; /* Show sidebar when 'visible' class is added */
+}
+
+.toggle-sidebar-button {
+  display: none; /* Hide toggle button by default */
+  /* Style the button as needed */
+  padding: 10px 20px;
+  background-color: #5BC53C;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Hide sidebar by default on mobile */
+  }
+
+  .chat-container {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .chat-app {
+    flex-direction: column; /* Adjust layout for mobile view */
+  }
+  
+  .toggle-sidebar-button {
+    display: block; /* Visible only on mobile /
+    /* Style as needed */
+    }
+
+  .sidebar.visible {
+      display: block; /* Show sidebar when 'visible' class is added on mobile */
+    }
+
+}

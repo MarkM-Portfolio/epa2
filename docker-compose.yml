@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  epa_setup:
+    build:
+      args:
+        - APP_DIR=/home/node/epa
+      context: ./
+      dockerfile: ./Dockerfile
+    container_name: epa
+    image: epa_setup:latest
+    ports:
+      - 8080:5000
+    environment:
+      - NODE_ENV=production
+    tty: true
+    command: npm run start
+    # restart: always
+    volumes:
+      - ./server/assets:/server/assets
+    # - ./log:/log

@@ -1,0 +1,15 @@
+**/node_modules/**
+./app/build
+./server/assets/**
+npm-debug.log
+.git
+.gitkeep
+.gitignore
+.dockerignore
+.vscode/**
+Dockerfile
+docker-compose.yml
+docker_run.sh
+run.sh
+apache2-config.sh
+setup-os.sh
